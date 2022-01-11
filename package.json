@@ -1,6 +1,27 @@
 {
   "name": "svelte-a11y-dialog",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "description": "Svelte component wrapping for a11y-dialog",
+  "homepage": "https://github.com/AgnosticUI/svelte-a11y-dialog",
+  "license": "MIT",
+  "author": "Rob Levin (https://www.agnosticui.com)",
+  "exports": {
+    ".": "./SvelteA11yDialog.svelte"
+  },
+  "keywords": [
+    "modal",
+    "dialog",
+    "accessibile dialog",
+    "accessibility",
+    "a11y",
+    "a11y-dialog",
+    "svelte",
+    "component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AgnosticUI/svelte-a11y-dialog.git"
+  },
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -19,9 +40,18 @@
     "eslint-plugin-svelte3": "^3.2.1",
     "svelte": "^3.44.0",
     "svelte-check": "^2.2.6",
+    "svelte-jester": "^2.1.5",
     "svelte-preprocess": "^4.9.4",
+    "svelte2tsx": "^0.4.13",
+    "ts-jest": "^27.1.2",
     "tslib": "^2.3.1",
     "typescript": "^4.4.3"
   },
-  "type": "module"
+  "type": "module",
+  "peerDependencies": {
+    "svelte": "^3.44.0"
+  },
+  "dependencies": {
+    "a11y-dialog": "^7.3.0"
+  }
 }
