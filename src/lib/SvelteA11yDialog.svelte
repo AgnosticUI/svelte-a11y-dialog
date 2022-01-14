@@ -55,8 +55,8 @@
   const teleportNode = async (node) => {
     const destination = document.querySelector(portalTarget);
     destination.appendChild(node);
-    // We don't render the template until mounted. So we
-    // need to await one more "tick" before teleporting
+    // We don't render the template until mounted. So we need
+    // wait one more "tick" before instantiating the dialog
     instantiateDialog();
   }
 
