@@ -2,7 +2,6 @@
   import { createEventDispatcher, onMount, onDestroy, tick } from "svelte";
   import A11yDialog from 'a11y-dialog';
 
-  console.log('in here...')
   const dispatch = createEventDispatcher();
 
   export let id: string;

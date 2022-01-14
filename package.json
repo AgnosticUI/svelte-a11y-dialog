@@ -23,6 +23,7 @@
     "url": "https://github.com/AgnosticUI/svelte-a11y-dialog.git"
   },
   "scripts": {
+    "svelte": "index.js",
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
