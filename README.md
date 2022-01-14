@@ -1,5 +1,7 @@
 # Svelte a11y-dialog
 
+**Experimental!**
+
 This is a Svelte wrapper component for [`a11y-dialog@7.3.0`](https://github.com/KittyGiraudel/a11y-dialog)
 
 - [Install](#install)
