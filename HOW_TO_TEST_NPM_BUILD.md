@@ -16,6 +16,7 @@ can create a tester app:
 yarn create vite package_test --template svelte # from top-level dir
 cd package_test # note that package_test is .gitignore'd
 yarn
+# Note you will need to update the tarball file name to whatever yarn pack created above
 npm i /Users/roblevin/workspace/opensource/svelte/svelte-a11y-dialog/package/svelte-a11y-dialog-v0.1.0.tgz
 # Copy the requisite dialog styles from svelte-a11y-dialog/src/routes/index.svelte into the package_test/index.html <head> section
 yarn dev
