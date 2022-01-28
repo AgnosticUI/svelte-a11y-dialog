@@ -34,7 +34,6 @@
 </button>
 <SvelteA11yDialog 
   id="a11y-dialog"
-  appRoot="#svelte"
   dialogRoot="#dialog-root"
   closeButtonLabel="My close button label"
   closeButtonPosition="last"

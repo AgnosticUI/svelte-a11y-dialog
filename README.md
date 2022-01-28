@@ -40,7 +40,6 @@ Then use as follows:
 >Open dialog</button>
 <SvelteA11yDialog 
   id="a11y-dialog"
-  appRoot="#svelte"
   dialogRoot="#dialog-root"
   closeButtonLabel="My close button label"
   closeButtonPosition="last"
@@ -82,14 +81,6 @@ In your main `index.html`, add a container where your dialog will be rendered in
 - **Type**: `String`
 - **Required**: `true`
 - **Description**: The unique HTML `id` attribute added to the dialog element, internally used by a11y-dialog to manipulate the dialog.
-
-
-### `appRoot`
-
-- **Property**: `appRoot`
-- **Type**: `String`, `Array<String>` — CSS Selector string.
-- **Required**: `true`
-- **Description**: The selector(s) `a11y-dialog` needs to disable when the dialog is open.
 
 ### `dialogRoot`
 

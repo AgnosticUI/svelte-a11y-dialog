@@ -7,7 +7,6 @@
   export let id: string;
   export let titleId = '';
   export let role: 'dialog' | 'alertdialog' = 'dialog';
-  export let appRoot: string;
   export let dialogRoot: string;
   export let closeButtonLabel = 'Close this dialog window';
   export let closeButtonPosition: 'first' | 'last' | 'none' = 'first';
@@ -26,7 +25,7 @@
   // Dialog element's binding
   let rootElement;
 
-  const portalTarget: string = dialogRoot || appRoot || "document.body";
+  const portalTarget: string = dialogRoot || "document.body";
 
   const fullTitleId = titleId || `${id}-title`;
 
