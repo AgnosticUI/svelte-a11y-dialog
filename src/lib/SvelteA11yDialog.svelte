@@ -10,7 +10,8 @@
   export let dialogRoot: string;
   export let closeButtonLabel = 'Close this dialog window';
   export let closeButtonPosition: 'first' | 'last' | 'none' = 'first';
-  export let classNames = {
+  export let classNames = {}
+  const defaultClassNames = {
     container: 'dialog-container',
     document: 'dialog-content',
     overlay: 'dialog-overlay',
@@ -18,6 +19,7 @@
     title: 'dialog-title',
     closeButton: 'dialog-close',
   };
+  const classes = {...defaultClassNames, ...classNames};
 
   // The dialog instance
   let dialog;
@@ -76,7 +78,7 @@
   <div
     id={id}
     bind:this={rootElement}
-    class={classNames.container}
+    class={classes.container}
     role={roleAttribute}
     aria-hidden="true"
     aria-labelledby={fullTitleId}
@@ -85,15 +87,15 @@
       <div
         data-a11y-dialog-hide
         tabindex="-1"
-        class={classNames.overlay}
+        class={classes.overlay}
         on:click|preventDefault={role === 'alertdialog' ? undefined : close}
       ></div>
-      <div role="document" class={classNames.document}>
+      <div role="document" class={classes.document}>
         {#if closeButtonPosition === 'first'}
           <button
             data-a11y-dialog-hide
             type="button"
-            class={classNames.closeButton}
+            class={classes.closeButton}
             aria-label={closeButtonLabel}
             on:click={close}
           >
@@ -102,7 +104,7 @@
             </slot>
           </button>
         {/if}
-        <p id={fullTitleId} class={classNames.title}>
+        <p id={fullTitleId} class={classes.title}>
           <slot name="title" />
         </p>
         <slot />
@@ -110,7 +112,7 @@
           <button
             data-a11y-dialog-hide
             type="button"
-            class={classNames.closeButton}
+            class={classes.closeButton}
             aria-label={closeButtonLabel}
             on:click={close}
           >
