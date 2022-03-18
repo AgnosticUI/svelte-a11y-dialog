@@ -1,6 +1,6 @@
 {
   "name": "svelte-a11y-dialog",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Svelte component wrapping for a11y-dialog",
   "homepage": "https://github.com/AgnosticUI/svelte-a11y-dialog",
   "license": "MIT",

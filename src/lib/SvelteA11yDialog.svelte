@@ -8,6 +8,7 @@
   export let titleId = '';
   export let role: 'dialog' | 'alertdialog' = 'dialog';
   export let dialogRoot: string;
+  export let title: string;
   export let closeButtonLabel = 'Close this dialog window';
   export let closeButtonPosition: 'first' | 'last' | 'none' = 'first';
   export let classNames = {}
@@ -16,7 +17,7 @@
     document: 'dialog-content',
     overlay: 'dialog-overlay',
     element: 'dialog-element',
-    title: 'dialog-title',
+    title: 'dialog-title h4',
     closeButton: 'dialog-close',
   };
   const classes = {...defaultClassNames, ...classNames};
@@ -105,7 +106,7 @@
           </button>
         {/if}
         <p id={fullTitleId} class={classes.title}>
-          <slot name="title" />
+          {title}
         </p>
         <slot />
         {#if closeButtonPosition === 'last'}

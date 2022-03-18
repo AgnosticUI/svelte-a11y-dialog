@@ -43,15 +43,13 @@ Then use as follows:
   dialogRoot="#dialog-root"
   closeButtonLabel="My close button label"
   closeButtonPosition="last"
+  title="A11yDialog Test"
   titleId="uniqueTitleId"
   role="dialog"
   on:instance={assignDialogInstance}
 >
   <svelte:fragment slot="closeButtonContent">
     <span>Close</span>
-  </svelte:fragment> 
-  <svelte:fragment slot="title">
-    <span>A11yDialog Test</span>
   </svelte:fragment> 
   <div>
     <p>This is some content</p>
@@ -96,6 +94,13 @@ In your main `index.html`, add a container where your dialog will be rendered in
 - **Required**: `false`
 - **Default**: `{}`
 - **Description**: Object of classes for each HTML element of the dialog element. Keys are: `base`, `overlay`, `document`, `title`, `closeButton`. See [a11y-dialog docs](https://a11y-dialog.netlify.app/) for reference.
+
+### `title`
+
+- **Property**: `title`
+- **Type**: `String`
+- **Required**: `true`
+- **Description**: The title of the dialog. svelte-a11y-dialog will place this in a paragraph tag and apply the `classes.title` to it.
 
 ### `titleId`
 
